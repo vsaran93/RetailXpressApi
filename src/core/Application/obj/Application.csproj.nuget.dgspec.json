@@ -1,17 +1,93 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application/Application.csproj": {}
+    "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application.csproj": {}
   },
   "projects": {
-    "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application/Application.csproj": {
+    "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application/Application.csproj",
+        "projectUniqueName": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application/Application.csproj",
+        "projectPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application.csproj",
         "packagesPath": "/Users/mahalingamvishnusaran/.nuget/packages/",
-        "outputPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/Application/obj/",
+        "outputPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mahalingamvishnusaran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/Domain.csproj": {
+                "projectPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/Domain.csproj",
+        "packagesPath": "/Users/mahalingamvishnusaran/.nuget/packages/",
+        "outputPath": "/Users/mahalingamvishnusaran/Projects/RetailXpressApi/src/core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mahalingamvishnusaran/.nuget/NuGet/NuGet.Config"
@@ -42,6 +118,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
