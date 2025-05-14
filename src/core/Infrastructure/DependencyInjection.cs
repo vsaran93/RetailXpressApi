@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Common.Interfaces;
 using Infrastructure.data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,9 +14,11 @@ public static class DependencyInjection
 {
     public static void AddInfrastructureServices(this IHostApplicationBuilder builder) 
     {
-        var connectionString = builder.Configuration.GetConnectionString("retailExpressDb");
+        // var connectionString = builder.Configuration.GetConnectionString("retailExpressDb");
 
         builder.Services.AddDbContext<ApplicationDbContext>(
-            options => options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test;ConnectRetryCount=0"));
+            options => options.UseSqlServer(@"Server=localhost,1433;Database=retailExpressDb;User Id=sa;Password=Admin@123;Encrypt=False;TrustServerCertificate=True;"));
+
+        builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
     }
 }
