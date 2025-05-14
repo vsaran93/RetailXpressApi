@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.Extensions.Hosting;
 
 namespace Microsoft.Extensions.DependencyInjection;

@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Domain.Entities;
-using Application.Common;
+using Application.Common.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Application.Products.Queries.GetProducts
@@ -20,8 +21,7 @@ namespace Application.Products.Queries.GetProducts
 
         public async Task<List<Product>> Handle(GetProductQuery request, CancellationToken cancellationToken)  
         {
-            return await _context.Product
-                .OrderBy(x => x.name);
+            return await _context.Products.ToListAsync();
         }
     }
 }
