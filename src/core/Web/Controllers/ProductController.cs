@@ -22,7 +22,7 @@ namespace Web.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts() 
         {
-            var products = _mediator.Send(new GetProductQuery());
+            var products = await _mediator.Send(new GetProductQuery());
             return Ok(products);
         }
     }

@@ -15,6 +15,7 @@ namespace Infrastructure.data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.Entity<Product>().ToTable("products");
         }
     }
 }

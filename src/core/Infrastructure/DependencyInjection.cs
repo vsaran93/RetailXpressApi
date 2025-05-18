@@ -14,11 +14,12 @@ public static class DependencyInjection
 {
     public static void AddInfrastructureServices(this IHostApplicationBuilder builder) 
     {
-        // var connectionString = builder.Configuration.GetConnectionString("retailExpressDb");
+        var connectionString = builder.Configuration.GetConnectionString("RetailExpressDb");
 
         builder.Services.AddDbContext<ApplicationDbContext>(
-            options => options.UseSqlServer(@"Server=localhost,1433;Database=retailExpressDb;User Id=sa;Password=Admin@123;Encrypt=False;TrustServerCertificate=True;"));
+            options => options.UseNpgsql(connectionString));
 
         builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+        
     }
 }

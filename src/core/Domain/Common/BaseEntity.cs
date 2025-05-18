@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Common
 {
     public class BaseEntity
     {
         [Key]
-        public Guid Id { get; set;}
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set;}
-        public Guid UserId { get; set; }
+        [Column("id")]
+        public int Id { get; set;}
     }
 }
