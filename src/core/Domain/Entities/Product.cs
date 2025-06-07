@@ -15,5 +15,17 @@ namespace Domain.Entities
 
         [Column("description")]
         public string Description {get; set;}
+
+        [Column("category_id")]
+        public int CategoryId {get;set;}
+
+        [Column("sub_category_id")]
+        public int SubCategoryId {get;set;}
+
+        [Column("price")]
+        public double Price {get;set;}
+
+        [Column("product_code")]
+        public string ProductCode {get;set;}
     }
 }
